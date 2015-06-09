@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	dh_auto_install
+	install -m 644 debian/rc/sbclrc debian/ralt-lisp/usr/share/ralt-lisp

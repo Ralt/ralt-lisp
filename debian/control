@@ -1,0 +1,10 @@
+Source: ralt-lisp
+Maintainer: Florian Margaine <florian@margaine.com>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.2
+
+Package: ralt-lisp
+Architecture: any
+Depends: ${misc:Depends}, sbcl, ralt-utils
+Description: Lisp-related utilities

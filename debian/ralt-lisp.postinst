@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+. /usr/share/debconf/confmodule
+
+db_get ralt_lisp/username
+
+ln -sfn /usr/share/ralt-lisp/sbclrc /home/${RET}/.
+chmod ${RET} /usr/share/ralt-lisp/sbclrc
+
+mkdir -p /tmp/ralt-lisp
+cd /tmp/ralt-lisp
+wget https://beta.quicklisp.org/quicklisp.lisp
+sbcl --load quicklisp.lisp --eval '(quicklisp-quickstart:install)' --quit
