@@ -6,15 +6,10 @@ set -e
 
 db_get ralt_lisp/username
 
-ln -sfn /usr/share/ralt-lisp/sbclrc /home/${RET}/.
+ln -sfn /usr/share/ralt-lisp/sbclrc /home/${RET}/.sbclrc
 chown ${RET} /usr/share/ralt-lisp/sbclrc
 
 mkdir -p /tmp/ralt-lisp
 cd /tmp/ralt-lisp
 wget https://beta.quicklisp.org/quicklisp.lisp
-su - ${RET} -s/bin/bash -c <<EOF
-sbcl --load quicklisp.lisp \
-    --eval '(quicklisp-quickstart:install)' \
-    --eval '(ql:quickload :quicklisp-slime-helper)' \
-    --quit
-EOF
+su ${RET} -c "sbcl --load quicklisp.lisp --eval '(quicklisp-quickstart:install)' --eval '(ql:quickload :quicklisp-slime-helper)' --quit"

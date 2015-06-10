@@ -1,5 +1,8 @@
-ralt-lisp (1.0-1) UNRELEASED; urgency=medium
+ralt-lisp (1.0-4) UNRELEASED; urgency=medium
 
   * Initial release.
+  * Fixes the postinst script.
+  * Fixes the postinst script.
+  * Fixes sbclrc path.
 
- -- Florian Margaine <florian@margaine.com>  Tue, 09 Jun 2015 21:11:38 +0000
+ -- Florian Margaine <florian@margaine.com>  Wed, 10 Jun 2015 21:12:24 +0000
