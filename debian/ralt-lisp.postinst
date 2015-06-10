@@ -13,5 +13,8 @@ mkdir -p /tmp/ralt-lisp
 cd /tmp/ralt-lisp
 wget https://beta.quicklisp.org/quicklisp.lisp
 su - ${RET} -s/bin/bash -c <<EOF
-sbcl --load quicklisp.lisp --eval '(quicklisp-quickstart:install)' --quit
+sbcl --load quicklisp.lisp \
+    --eval '(quicklisp-quickstart:install)' \
+    --eval '(ql:quickload :quicklisp-slime-helper)' \
+    --quit
 EOF
