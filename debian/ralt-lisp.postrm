@@ -7,6 +7,7 @@ set -e
 db_get ralt_lisp/username
 
 rm -f /home/${RET}/.sbclrc
+rm -rf /home/${RET}/quicklisp/
 
 if [ "$1" = "purge" -a -e /usr/share/debconf/confmodule ]; then
     # Source debconf library.
